@@ -3,6 +3,11 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
+//Set some express properties
+app.set('case sensitive routing', true);
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 //Use the express router
 app.use('/', require('./routes/index'));
 
