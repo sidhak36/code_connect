@@ -1,5 +1,6 @@
 
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 8000;
 
@@ -7,6 +8,8 @@ const port = 8000;
 app.set('case sensitive routing', true);
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+app.use(expressLayouts);
 
 //Use the express router
 app.use('/', require('./routes/index'));
