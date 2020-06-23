@@ -1,6 +1,9 @@
 <html>
     <head>
         <title><%= title %></title>
+        <link rel="stylesheet" href="/css/layout.css">
+        <!-- <link rel="stylesheet" href="<%= '/css/' + locals.fileName%>"> -->
+        <%- style %>
     </head>
 
     <body>
@@ -10,5 +13,7 @@
         <%- body %>
 
         <%- include('_footer') %>
+
+        <%- script %>
     </body>
 </html>

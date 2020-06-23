@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    font-family: verdana;
+    font-size: 13px;
+}
+
+.bar{
+    background-color: yellowgreen;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}

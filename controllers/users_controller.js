@@ -1,8 +1,12 @@
 
 
 module.exports.profileController = function(req, res){
+    // return res.render('user_profile', {
+    //     title: 'Profile Page',
+    //     fileName: 'user_profile.css'
+    // });
     return res.render('user_profile', {
-        title: 'Profile Page'
+        title: 'Profile Page',
     });
     //return res.end('<h1>This is User\'s profile');
 }
