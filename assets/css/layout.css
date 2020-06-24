@@ -4,19 +4,70 @@ body{
     font-size: 13px;
 }
 
+/* Header and Footer Styles*/
+
 .bar{
     background-color: yellowgreen;
-    height: 40px;
+    height: 60px;
     width: 100%;
+}
+
+/* Header Styles */
+header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.bar p{
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
+#sign-in{
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#sign-in form{
+    margin: 0;
+}
+
+#sign-in label{
+    font-size: 1.1rem;
+
+}
+
+#sign-in input{
+    width: 200px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+#sign-in button{
+    font-size: 1.1rem;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+
+/* Footer Styles */
+
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     bottom: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
 }
+

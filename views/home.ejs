@@ -1,6 +1,14 @@
 
 <link rel="stylesheet" href="/css/home.css">
-<h1>Code_Connect | <%= title %> </h1>
 
 
-        
+<!-- Sign Up Form -->
+<div id="sign-up">
+    <h1>Don't have an account? Sign up now!</h1>
+    <form action="/sign-up" method="POST">
+        <input id = "sign-up-name" type="text" name = "name" required placeholder="Name">
+        <input id = "sign-up-email" name = "email" type="Email (eg. abc@xyz.com)" placeholder="abc@xyz.com" required>
+        <input type="password" name="password" id="sign-up-password" required placeholder="Password">
+        <button type="submit">Create Account</button>
+    </form>
+</div>
