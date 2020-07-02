@@ -1,10 +1,10 @@
 
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
+const cookieParser = require('cookie-parser');
 require('./config/mongoose');
 const app = express();
 const port = 8000;
-
 //Set some express properties
 app.set('case sensitive routing', true);
 app.set('view engine', 'ejs');
@@ -13,6 +13,7 @@ app.set('layout extractScripts', true);
 app.set('layout extractStyles', true);
 
 app.use(express.urlencoded());
+app.use(cookieParser());
 
 app.use(expressLayouts);
 

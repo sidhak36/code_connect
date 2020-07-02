@@ -1,7 +1,6 @@
 
 <link rel="stylesheet" href="/css/home.css">
 
-
 <!-- Sign Up Form -->
 <div id="sign-up">
     <h1>Don't have an account? Sign up now!</h1>
@@ -9,6 +8,11 @@
         <input id = "sign-up-name" type="text" name = "name" required placeholder="Name">
         <input id = "sign-up-email" name = "email" type="Email (eg. abc@xyz.com)" placeholder="abc@xyz.com" required>
         <input type="password" name="password" id="sign-up-password" required placeholder="Password">
+        <input type="password" name="confirm_password" id="sign-up-confirm-password" required placeholder="Confirm Password">
         <button type="submit">Create Account</button>
     </form>
 </div>
+
+<%if(locals.page_count){%>
+    <h1>You've viewed the page <%= page_count %> times</h1>
+<%}%>
