@@ -2,6 +2,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 require('./config/mongoose');
 const app = express();
 const port = 8000;
@@ -14,6 +15,16 @@ app.set('layout extractStyles', true);
 
 app.use(express.urlencoded());
 app.use(cookieParser());
+app.use(session({
+    name: 'SESS_NAME',
+    secret: 'This is social website\/codeconnect',
+    saveUninitialized: false,
+    resave: true,
+    cookie: {
+        maxAge:  60*60*1000,
+        sameSite: true
+    }
+}));
 
 app.use(expressLayouts);
 

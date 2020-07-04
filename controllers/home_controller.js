@@ -2,6 +2,7 @@
 const User = require('../models/user');
 module.exports.home = function(req, res){
     
+    console.log(req.session);
     // return res.render('home', {title: 'Home Page', fileName: 'home.css'});
     
     if(req.cookies.user_id){
@@ -80,6 +81,7 @@ module.exports.signIn = function(req, res){
             //Create Session
             if(user.password === req.body.password){
                 //startSession
+                req.session.user_id = user.id;
                 res.cookie('user_id', user.id);
                 return res.redirect('/users/profile');
             }else{
@@ -95,6 +97,11 @@ module.exports.signIn = function(req, res){
 
 module.exports.signOut = function(req, res){
     if(req.cookies.user_id){
+        req.session.destroy(function(err){
+            if(err){
+                console.log(err);
+            }
+        });
         res.clearCookie('user_id');
     }
     res.redirect('/');
