@@ -2,6 +2,7 @@
 <header class = "bar">
     <p>CODE_CONNECT</p>
     <!-- Sign In Form -->
+    <% if(!locals.authenticated){ %>
     <div id="sign-in">
         <form action="/sign-in" method="POST">
             <label for="sign-in-email">Email:</label>
@@ -11,4 +12,7 @@
             <button type="submit">Sign In</button>
         </form>
     </div>
+    <% }else{ %>
+        <a href="/sign-out">Sign Out</a>
+    <% } %>
 </header>
